@@ -1,3 +1,6 @@
+// ConsoleApplication4.cpp: определяет точку входа для консольного приложения.
+//
+
 #include "stdafx.h"
 #include <string.h>
 #include <stdlib.h>
@@ -27,14 +30,15 @@ Node* Balance(Node* root);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	//FILE* output = fopen("output.txt","w");
+	//FILE* input = fopen("input.txt","r");
+	//Node* head = ScanFileRecord(input);
+	
+	
 	Node* newRoot;
-	FILE* output = fopen("output.txt","w");
-	FILE* input = fopen("input.txt","r");
-	Node* head = ScanFileRecord(input);
+	Node* head = CreateNode(8, "data");
 
-	/*newRoot = CreateNode(8,"data");
-	head = InsertNode(head,newRoot);
-		newRoot = CreateNode(14,"data");
+	newRoot = CreateNode(14,"data");
 	head = InsertNode(head,newRoot);
 		newRoot = CreateNode(13,"data");
 	head = InsertNode(head,newRoot);
@@ -48,7 +52,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	head = InsertNode(head,newRoot);
 		newRoot = CreateNode(4,"data");
 	head = InsertNode(head,newRoot);
-*/
+
 	/*scanf("%d",&key2);
 	FindItem(head,key2);
 	DeleteNode(head,key2)*/
@@ -66,7 +70,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//	}
 	//}
 	
-	fclose(output);
+	//fclose(output);
 	getchar();
 
 	FreeNode(head);
